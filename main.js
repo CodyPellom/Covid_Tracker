@@ -26,14 +26,15 @@ getData = async () => {
     for (var c in json.data.covid19Stats) {
         let li = document.createElement('li');
         ul.appendChild(li);
-        li.innerHTML = 
-        "State: " + json.data.covid19Stats[c].province + 
-        " " + "Confirmed Cases: " + json.data.covid19Stats[c].confirmed +
-        " " + "Deaths: " + json.data.covid19Stats[c].deaths
-        
+        li.innerHTML =
+            "State: " + json.data.covid19Stats[c].province +
+            " " + "Confirmed Cases: " + json.data.covid19Stats[c].confirmed +
+            " " + "Deaths: " + json.data.covid19Stats[c].deaths
     }
 
 
 
 }
 getData();
+
+
