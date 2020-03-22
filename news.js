@@ -15,11 +15,13 @@ for( let c in json.articles ){
     let br = document.createElement('br');
     
     ul.appendChild(img);
-    ul.appendChild(a);
-    ul.appendChild(p);
+    ul.appendChild(br);
+    ul.appendChild(br);
 
-    ul.appendChild(br);
-    ul.appendChild(br);
+    ul.appendChild(a);
+
+
+    ul.appendChild(p);
 
     img.src = json.articles[c].urlToImage;
     a.href = json.articles[c].url;

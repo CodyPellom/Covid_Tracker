@@ -90,13 +90,18 @@ ul{
 #news_area {
 width: 100%;    
 }
-
+#news_area ul {
+    margin: 0;
+    padding: 0;
+}
 #news_area li {
     list-style: none;
 }
 #news_area img {
- 
-width: 100%; 
+ max-height: 50vw;
+max-width: 80%; 
+margin-bottom: 50px;
+
  
 }
 #news_area a {
@@ -104,6 +109,7 @@ width: 100%;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
 }
 li {
     text-align: left;
