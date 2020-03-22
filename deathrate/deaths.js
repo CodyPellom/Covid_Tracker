@@ -1,4 +1,5 @@
-
+const xlabels2 = [];
+const confirmed_deaths_data = [];
 getData = async () => {
     // This is the CDC one const url = 'https://data.cdc.gov/resource/x8jf-txib';
     const endpoint = 'https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country=US';
@@ -35,9 +36,9 @@ getData();
 
 
 /* Chart.js  Confirmed Deaths Area starts */
+getGraph = () => {
 const ctxTwo = document.getElementById('chartTwo').getContext('2d');
-const xlabels2 = [];
-const confirmed_deaths_data = [];
+
 const chartTwo = new Chart(ctxTwo, {
     type: 'bar',
     data: {
@@ -45,23 +46,13 @@ const chartTwo = new Chart(ctxTwo, {
         datasets: [{
             label: 'Covid-19 Deaths in United States', //Label of the graph itself
             data: confirmed_deaths_data,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
+            backgroundColor: 
+                'rgba(230, 0, 0, 1)'
+            ,
+            borderColor: 
+                'rgba(0, 0, 0, 1)'                
+            ,
+            borderWidth: 1.5
         }]
     },
     options: {
@@ -75,3 +66,5 @@ const chartTwo = new Chart(ctxTwo, {
     }
 });
 /* Chart.js  Confirmed Cases Area ends */
+}
+setTimeout(getGraph, 2000);

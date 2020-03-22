@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDC Api</title>
-    <link rel="stylesheet" href="./main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="./main.css">
+
+    <title>Confirmed Cases</title>
 </head>
+
 <body>
-    <h3>Covid-19 Tracking</h3>
-    <p>Use this application to track Covid-19 in the United States</p>
-    <script src="./main.js"></script>
-    <div id="list"></div>
-    <a href="./confirmed/confirmed.html">Confirmed Cases</a>
+    <div class="navbar row">
+        <a href="./feed/feed.html">API Feed</a>
+        <a href="./deathrate/deaths.html">Confirmed Deaths</a>
+        <a href="./about/about.html">About</a>
+    </div>
+    <div class="column center-text">
+        <h1>Confirmed Cases of Covid-19 in the United States</h1>
+        <p>This site uses an API that tracks Covid-19 cases daily in the United States. While this information may
+            be helpful in us tracking the virus, it is not accurate to the extent of tracking the cases that are not
+            tracked. You can check this site daily to stay safer. Remember to avoid coming within 6 feet of the public.
+        </p>
+    </div>
+    <h3>Tips: </h3>
+    <ul>
+        <li>Stockpile groceries and supplies if possible</li>
+        <li>Stay away from people where possible</li>
+        <li>Use your best judgement when going out to avoid crowds</li>
+        <li>Wash your hands frequently for 20 seconds at a time with hot water</li>
+    </ul>
+
+    <canvas id="chart" width="400" height="400"></canvas>
+    <script src="./confirmed.js"></script>
 
 </body>
+
 </html>
