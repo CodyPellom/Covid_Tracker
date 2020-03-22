@@ -5,28 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <title>Confirmed Deaths</title>
+    <title>Global Statistics | Covid-19 Tracking U.S.</title>
 </head>
 
 <body>
     <div class="navbar row">
-        <a href="../index.html">Home</a>
-        <a href="../confirmed/confirmed.html">Home & Confirmed Cases</a>
-        <a href="../about/about.html">About</a>
+        <a href="./feed.html">API Feed</a>
+        <a href="./deaths.html">Confirmed Deaths</a>
+        <a href="./about.html">About</a>
+        <a href="./news.html">News</a>
     </div>
     <div class="column center-text">
-        <h1>Confirmed Deaths in the United States</h1>
-        <p>While the united state's death rate is currently low, this is due to rise according to the statistics.</p>
+        <h1>Global Monitoring of Covid-19</h1>
+        <p>Here are the global stats on Covid-19.</p>
     </div>
-    <canvas id="chartTwo" height=600 width=400></canvas>
-    <script src="./deaths.js"></script>
+
+
+    <canvas id="chart" height=6500 width=1200></canvas>
+    <div class="column center-text">
+</div>
+
+ 
 
     <div class="column center-text">
-        <h4 style="color: red;">Please Donate</h4>
-        <p>Most money will go towards Covid-19 Humanitarian Aide. I will use a small amount for upkeep on the site as
-            well. </p>
+        <h2 style="color: red;">Please Donate</h2>
+        <p>Proceeds will go towards Covid-19 Humanitarian Aide. To find out more, please go to the <a href="./about.html">about</a> page. </p>
 
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_donations" />
@@ -38,6 +45,7 @@
             <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </form>
     </div>
+    <script src="./global.js"></script>
 </body>
 
 </html>

@@ -14,37 +14,42 @@
 
 <body>
     <div class="navbar row">
-        <a href="./feed/feed.html">API Feed</a>
-        <a href="./deathrate/deaths.html">Confirmed Deaths</a>
-        <a href="./about/about.html">About</a>
+        <a href="./feed.html">API Feed</a>
+        <a href="./deaths.html">Confirmed Deaths</a>
+        <a href="./about.html">About</a>
     </div>
     <div class="column center-text">
-        <h1>Confirmed Cases of Covid-19 in the United States</h1>
-        <p>This site uses an API that tracks Covid-19 cases daily in the United States. While this information may
-            be helpful in us tracking the virus, it is not accurate to the extent of tracking the cases that are not
-            tracked. You can check this site daily to stay safer. Remember to avoid coming within 6 feet of the public.
-        </p>
+        <h1>Cases of Covid-19 in the United States</h1>
+        <p>The purpose of this site is to not only raise awareness in the United States over the growing Covid-19
+            pandemic but to also support the growing need for humanitarian aide. <br><br>The following interactive graph contains
+        the datasets for both confirmed cases and confirmed deaths.</p>
     </div>
-    <h3>Tips: </h3>
+
+
+    <canvas id="chart" height=1000 width=600></canvas>
+    <div class="column center-text">
+
+
+        <h4>Tips: </h4>
     <ul>
         <li>Stockpile groceries and supplies if possible</li>
         <li>Stay away from people where possible</li>
         <li>Use your best judgement when going out to avoid crowds</li>
         <li>Wash your hands frequently for 20 seconds at a time with hot water</li>
     </ul>
+</div>
 
-    <canvas id="chart" height=600 width=400></canvas>
     <div class="column center-text">
+
         <h1>More Stats to Keep in Mind:</h1>
-        <h2 style="color: red;">United States Total Confirmed Cases: <span id="USTotalCases"></span></h2>
+        <p style="font-size: 22px;">United States Total Confirmed Cases: <span id="USTotalCases"></span></p>
     </div>
     <script src="./confirmed.js"></script>
 
 
     <div class="column center-text">
-        <h4 style="color: red;">Please Donate</h4>
-        <p>Most money will go towards Covid-19 Humanitarian Aide. I will use a small amount for upkeep on the site as
-            well. </p>
+        <h2 style="color: red;">Please Donate</h2>
+        <p>Proceeds will go towards Covid-19 Humanitarian Aide. To find out more, please go to the <a href="./about.html">about</a> page. </p>
 
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_donations" />
