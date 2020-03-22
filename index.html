@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="stylesheet" href="./main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <title>Confirmed Cases</title>
 </head>
@@ -31,9 +33,29 @@
         <li>Wash your hands frequently for 20 seconds at a time with hot water</li>
     </ul>
 
-    <canvas id="chart" width="400" height="400"></canvas>
+    <canvas id="chart" height=600 width=400></canvas>
+    <div class="column center-text">
+        <h1>More Stats to Keep in Mind:</h1>
+        <h2 style="color: red;">United States Total Confirmed Cases: <span id="USTotalCases"></span></h2>
+    </div>
     <script src="./confirmed.js"></script>
 
+
+    <div class="column center-text">
+        <h4 style="color: red;">Please Donate</h4>
+        <p>Most money will go towards Covid-19 Humanitarian Aide. I will use a small amount for upkeep on the site as
+            well. </p>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations" />
+            <input type="hidden" name="business" value="paulpellom@gmail.com" />
+            <input type="hidden" name="item_name" value="Covid 19 Humanitarian Aide & Basic Upkeep on the Site" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+                name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+    </div>
 </body>
 
 </html>

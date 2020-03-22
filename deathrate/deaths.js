@@ -34,13 +34,18 @@ getData();
 
 /* Chart.js  Confirmed Cases Area starts */
 
+let userSelectType = ['bar'];
+if (window.screen.width <= 800 && window.screen.height <= 768) {
+    userSelectType[0] = 'horizontalBar';
+}
+
 
 /* Chart.js  Confirmed Deaths Area starts */
 getGraph = () => {
 const ctxTwo = document.getElementById('chartTwo').getContext('2d');
 
 const chartTwo = new Chart(ctxTwo, {
-    type: 'bar',
+    type: userSelectType[0],
     data: {
         labels: xlabels2,
         datasets: [{
